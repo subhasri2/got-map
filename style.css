@@ -1,0 +1,101 @@
+/* GENERAL PAGE STYLE */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #070b16;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* MAP CONTAINER + IMAGE */
+#map-container {
+    width: 80vw;             /* 80% of viewport width */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;      /* so .region can be positioned over image */
+    border: 3px solid #444;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    background-color: #000;  /* fallback while image loads */
+}
+
+#map-image {
+    width: 100%;
+    height: auto;            /* keep original aspect ratio */
+    display: block;
+}
+
+/* REGION LABELS (over the image) */
+.region {
+    position: absolute;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+
+    background-color: rgba(10, 15, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #f5f5f5;
+
+    transform: translate(-50%, -50%); /* so top/left are the center */
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.region:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 10px rgba(255, 221, 87, 0.8);
+}
+
+/* APPROX POSITIONS ON YOUR SPECIFIC IMAGE (in %) */
+.north {
+    top: 17%;
+    left: 23%;
+}
+
+.winterfell {
+    top: 27%;
+    left: 25%;
+}
+
+.riverlands {
+    top: 42%;
+    left: 27%;
+}
+
+.kings-landing {
+    top: 52%;
+    left: 30%;
+}
+
+.dorne {
+    top: 70%;
+    left: 30%;
+}
+
+/* INFO PANEL */
+#info-panel {
+    width: 80vw;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #0e1428;
+    border: 2px solid #3a4562;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+#region-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffdd57;
+    font-size: 24px;
+}
